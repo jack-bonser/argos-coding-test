@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script><!-- JQuery -->
+		<script type="text/javascript" src="lib/javascript/argos.js"></script><!-- JS -->
+		<link type="text/css" rel="stylesheet" href="lib/css/argos.css"/><!-- CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<header>
+			<img id="logo" src="lib/images/Argos.png"/>
+		</header>
+		<div id="main">
+			<div id="main-header">
+				<div id="product-list-header">
+					<h1>Argos Hot Deals</h1>
+					<div id="product-list-button">
+						<a href="#" class="HUKD" onclick="getData('getData')">Load Competitors Via HUKD API</a>
+						<a href="#" class="AA" onclick="getData('getDataAmazon')">Load Competitors Via Amazon API</a>
+					</div>
+				</div>
+			</div>
+			<div id="product-list"></div>
+		</div>
+		<footer></footer>
+	</body>
+</html>
