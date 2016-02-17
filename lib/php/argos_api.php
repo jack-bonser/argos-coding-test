@@ -34,7 +34,7 @@ function getDataAmazon(){
 
 //get top 10 Argos Products
 function get_hukd_data(){
-	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=2a62da6c215e4435873f5b754b47e863&output=json&merchant=argos&order=hot&results_per_page=10";
+	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=&output=json&merchant=argos&order=hot&results_per_page=10";
 	$content = file_get_contents($api_string);
 
 	$json = json_decode($content);
@@ -68,7 +68,7 @@ function get_competitor_products($json){
 // Still can be inaccurate if the tags have vague values 
 function find_product($query, $price){
 	// time consuming - easier way?
-	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=2a62da6c215e4435873f5b754b47e863&output=json&merchant=amazon-uk&results_per_page=1&page=1&exclude_expired=true&forum=deals" . $query;
+	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=&output=json&merchant=amazon-uk&results_per_page=1&page=1&exclude_expired=true&forum=deals" . $query;
 	
 	// get results
 	$content = file_get_contents($api_string);	
@@ -161,7 +161,7 @@ function my_sort($a, $b)
 /* Previous find products methods - searched on the tag paramaters instead of the search parameter 
 function find_product($query, $price){
 	// time consuming - easier way?
-	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=2a62da6c215e4435873f5b754b47e863&output=json&merchant=amazon-uk&results_per_page=1&page=1&exclude_expired=true&forum=deals" . $query;
+	$api_string = "http://api.hotukdeals.com/rest_api/v2/?key=&output=json&merchant=amazon-uk&results_per_page=1&page=1&exclude_expired=true&forum=deals" . $query;
 	//echo $api_string . "\n";
 	//$milliseconds = round(microtime(true) * 1000);
 	$content = file_get_contents($api_string);
